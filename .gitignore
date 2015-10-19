@@ -5,5 +5,5 @@
 /wp-content/*
 !/wp-content/themes
 /wp-content/themes/*
-!/wp-content/themes/blog
+!/wp-content/themes/imagine
 !.gitignore

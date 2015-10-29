@@ -133,8 +133,9 @@ blockquote p {
 
 header {
 	background-color: #252525;
-    padding: 30px 0;
+    padding: 10px 0;
     z-index: 2;
+    position: relative;
 }
 .logo {
     display: inline-block;
@@ -143,22 +144,21 @@ header {
 .menu-btn {
     display: inline-block;
     float: right;
-    font-family: 'Cabin', sans-serif;
-    font-size: 1em;
-    text-transform: uppercase;
-    margin-right: 5px;
-    padding: 9px 12px;
-    background-color: #A9A5A5;
-    border-radius: 5px;
-    border: 1px solid #232222;
+    margin-right: 20px;
     box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, .2);
     cursor: pointer;
+    position: relative;
+    top: 8px;
 }
 .menu-btn:hover {
-    background-color: #fff;
 }
 .menu-btn:focus {
     outline: none;
+}
+.menu-btn img {
+    width: 35px;
+    height: 35px;
+    border-radius: 3px;
 }
 
 /* Navigation */
@@ -183,12 +183,11 @@ header {
 }
 .site-nav {
     display: block;
-    position: fixed;
-    height: 100%;
+    position: absolute;
+    height: auto;
     background-color: #252525;
     width: 100%;
-    z-index: 10;
-    overflow-y: scroll;
+    z-index: 2;
 
     -webkit-transform: translate(0, -100%);
     -moz-transform: translate(0, -100%);
@@ -206,17 +205,19 @@ header {
 .site-nav ul li a {
     display: block;
     padding: 25px 40px;
-    color: #C7C7C7;
+    color: #fff;
+    text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    border-bottom: 1px solid #383535;
 }
-.site-nav ul li a:hover, .site-nav ul li:hover {
-    color: #CE6304; 
+.site-nav ul li a:hover, .site-nav ul li:hover { 
     background-color: #484848;
 } 
 .site-nav ul li.current-menu-item a:link, .site-nav ul li.current-menu-item a:visited {
-    color: #CE6304;
-    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3)
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
+    border-left: 2px solid #CE6304;
+    border-right: 2px solid #CE6304;
 }
 .close-btn {
     width: 40px;
@@ -260,34 +261,54 @@ header {
 /* Posts */
 
 .postpage {
-	padding: 20px 10px;
+	padding: 10px;
     width: 100%;
-    display: inline-block;
-    border-bottom: 1px solid #ddd;
+    display: block;
+    border-bottom: 3px solid #ddd;
 }
 .postpage:last-of-type {
     border-bottom: none;
     margin-bottom: 20px;
 }
-.single-post {
-    background-color: #E4E4E4;
+.single-page {
     color: #000;
     text-align: justify;
+    padding-bottom: 30px;
 }
-.single-post h2 {
-    color: #0352E6;
-    font-size: 1.5em;
+.page h2, .page h3, .page h5 {
     text-align: center;
     text-transform: uppercase;
+}
+.page h2 {
+    font-size: 2.25em;
     margin-top: 10px;
 }
-.single-post p {
+.page h3 {
+    font-size: 1.75em;
+    text-align: center;
+    padding: 5px 0;
+}
+.page h5 {
+    font-weight: 1.5em;
+    font-weight: bolder;
+    margin: 10px 0;
+    color: #CE6304;
+}
+.page p {
+    text-align: center;
     padding: 5px 10px;
     font-size: 1em;
     line-height: 1em;
 }
+.skills {
+    background-color: #ddd;
+    padding: 10px;
+}
 .post {
     margin: 0 auto;
+}
+.single-post {
+    padding-bottom: 30px;
 }
 
 /* Post Info */
@@ -295,7 +316,7 @@ header {
 .post-info {
     font-size: 1em;
     color: #969696;
-    margin: 10px 0 5px 0;
+    margin: 5px 0;
 }
 .post-info a {
     font-size: 1em;
@@ -307,18 +328,13 @@ header {
 
 .more-link {
     display: block;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #4A4A4A;
-    border-radius: 10px;
-    width: 120px;
+    width: 180px;
+    padding: 15px;
+    padding-left: 55px;
     color: #000;
     text-decoration: none;
-    text-transform: uppercase;
-}
-.more-link:hover {
-    color: #000;
-    background-color: #7383FF;
+    background-image: url(images/read-more.png);
+    background-repeat: no-repeat;
 }
 
 /* Image Styles */
@@ -333,40 +349,46 @@ img {
 .post-image img {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 10px;
     display: block;
 }
-
+.single-image img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 20px 30px;
+}
 /* Footer */
 
 footer {
 	background-color: #252525;
     text-align: center;
+    position: relative;
 }
 footer p {
     padding: 10px 0;
 }
 
 .back-to-top {
-    display: none;
-    position: fixed;
-    bottom: 70px;
-    right: 5%;
     text-decoration: none;
-}
-.back-to-top img {
-    width: 40px;
-    height: 40px;
-    border-radius: 20%;
+    position: relative;
+    top: -32px;
 }
 
 /* Media */
 
 @media only screen and (min-width: 460px) {
-    .post {
+    .postpage {
         width: 85%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 @media only screen and (min-width: 530px) {
+    .postpage {
+        display: inline-block;
+        width: 100%;
+    }
     .post-image {
         display: inline-block;
         float: left;
@@ -386,9 +408,10 @@ footer p {
     }
     .cat-nav {
         background-color: inherit;
+        text-align: center;
     }
     .cat-nav ul li {
-        float: left;
+        display: inline-block;
     }
 }
 @media only screen and (min-width: 900px) {
@@ -397,7 +420,6 @@ footer p {
         top: 0;
         left: 0;
         width: 100%;
-        opacity: 0.98;
     }
     .container {
         margin: 93px auto;
@@ -409,9 +431,8 @@ footer p {
     }
     .nav {
         display: inline-block;
-    }
-    .logo {
-        width: 40%;
+        margin: 20px 0;
+        float: right;
     }
     h2 {
         font-size: 2em;
@@ -429,17 +450,15 @@ footer p {
     .logo {
         position: relative;
         left: 5%;
-        width: 300px;
     }
     .single-post {
         margin-top: 93px;
     }
     .more-link {
         position: absolute;
-        bottom: 5px;
     }
     .site-nav {
-        z-index: 1;
+        display: none;
     }
 }
 @media only screen and (min-width: 1100px) {
@@ -457,8 +476,7 @@ footer p {
     }
     .nav {
         position: absolute;
-        right: 20%;
-        top: 45px;
+        right: 15%;
     }
     .postpage {
         border-bottom: 2px solid #ddd;
@@ -473,7 +491,6 @@ footer p {
     }
     .nav {
         right: 25%;
-        top: 45px;
     }
     .logo {
         left: 25%;

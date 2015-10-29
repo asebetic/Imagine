@@ -11,7 +11,6 @@
 
 <body <?php body_class(); ?>>
         <nav class="site-nav">
-            <button class="close-btn">X</button>
             <?php
             $args = array(
                 'theme_location' => 'primary'
@@ -25,7 +24,7 @@
             <div class="logo">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png"></a>
             </div>
-            <button class="menu-btn">Menu</button>
+            <a class="menu-btn"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/menu.png"></a>
             <nav class="nav">
             <?php
             $args = array(

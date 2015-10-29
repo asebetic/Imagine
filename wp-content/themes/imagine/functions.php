@@ -11,7 +11,10 @@ function blog_setup() {
 	// Add feature image support
 	add_theme_support('post-thumbnails');
 
-	add_image_size('post-image', 420, 280, true);
+	add_image_size('post-image', 420, 420, true);
+    add_image_size('single-image', 420, 420, true);
+
+
     // Navigation Menus
     register_nav_menus(array(
         'primary' => __('Primary Menu'),

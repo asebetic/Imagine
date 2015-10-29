@@ -10,11 +10,8 @@ $(document).ready(function() {
             $('.site-nav').css('transform', 'translate(0, 0');
             menu = "open";
         }
-    });
-    
-    $('.close-btn').click(function() {
 
-        if(menu == "open") {
+        else {
             $('.site-nav').css('-webkit-transform', 'translate(0, -100%');
             $('.site-nav').css('-moz-transform', 'translate(0, -100%');
             $('.site-nav').css('transform', 'translate(0, -100%');
@@ -31,13 +28,4 @@ $(document).ready(function() {
         }, 300);
     });
 
-    var amountScrolled = 250;
-
-    $(window).scroll(function() {
-        if ( $(window).scrollTop() > amountScrolled ) {
-            $('.back-to-top').fadeIn(300);
-        } else {
-            $('.back-to-top').fadeOut(300);
-        }
-    });
 });

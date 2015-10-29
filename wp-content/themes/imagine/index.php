@@ -17,9 +17,8 @@
         <section class="postpage">
             <div class="post-image">
                 <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('post-image'); ?></a>
-            </div>
-            <div class="post">
-                <p class="post-info"><?php
+            </div>            
+            <div class="post"><p class="post-info"><?php
             
             $categories = get_the_category();
             $separator = ", ";
@@ -38,10 +37,9 @@
             }
             
             ?> | <?php the_time('F j, Y'); ?></p>
-    	        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    	                       
-    	        <?php the_content('Read More'); ?>
-            </div>
+            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>                            
+                <?php the_content('Read more'); ?>
+            </div>          
     	</section>
 
         <?php endwhile;

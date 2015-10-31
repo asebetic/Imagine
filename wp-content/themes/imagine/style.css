@@ -241,6 +241,7 @@ header {
 .cat-nav {
     display: block;
     padding: 10px;
+    margin-bottom: 10px;
     background-color: #ccc;
 }
 .cat-nav ul li {
@@ -261,10 +262,10 @@ header {
 /* Posts */
 
 .postpage {
-	padding: 10px;
+	padding: 15px;
     width: 100%;
     display: block;
-    border-bottom: 3px solid #ddd;
+    border-bottom: 2px solid #ddd;
 }
 .postpage:last-of-type {
     border-bottom: none;
@@ -328,13 +329,18 @@ header {
 
 .more-link {
     display: block;
-    width: 180px;
-    padding: 15px;
-    padding-left: 55px;
+    margin: 10px auto;
+    padding: 10px;
     color: #000;
     text-decoration: none;
-    background-image: url(images/read-more.png);
-    background-repeat: no-repeat;
+    text-align: center;
+    border: 1px solid #868686;
+    border-radius: 15px;
+    background-color: #E6E6E6;
+}
+.more-link:hover {
+    background-color: #868686;
+    color: #fff;
 }
 
 /* Image Styles */
@@ -358,6 +364,7 @@ img {
     display: block;
     padding: 20px 30px;
 }
+
 /* Footer */
 
 footer {
@@ -456,6 +463,7 @@ footer p {
     }
     .more-link {
         position: absolute;
+        width: 150px;
     }
     .site-nav {
         display: none;

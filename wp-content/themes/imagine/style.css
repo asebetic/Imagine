@@ -81,6 +81,10 @@ body {
 	font-weight: 500;
     font-size: 1em;
 }
+.container, .postpage {
+    margin-left: auto;
+    margin-right: auto;
+}
 h1, h2, h3 {
 	text-align: left;
 }
@@ -112,21 +116,23 @@ blockquote {
     position: relative;
     font-style: italic;
     border-left: 10px solid #404040;
-    margin: 1.5em 10px;
+    margin: 2.5em 0;
     padding: 0.5em 10px;
     quotes: "\201C""\201D""\2018""\2019";
 }
 blockquote:before {
-  color: #404040;
-  font-family: sans-serif;
-  font-size: 3.5em;
-  position: absolute;
-  top: 0;
-  content:"\201C";
+    color: #404040;
+    font-family: sans-serif;
+    font-size: 3.5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content:"\201C";
 }
 blockquote p {
-  display: inline;
-  margin-left: 15px;
+    font-size: 1.25em;
+    display: inline;
+    margin-left: 15px;
 }
 
 /* Header */
@@ -149,8 +155,6 @@ header {
     cursor: pointer;
     position: relative;
     top: 8px;
-}
-.menu-btn:hover {
 }
 .menu-btn:focus {
     outline: none;
@@ -275,6 +279,11 @@ header {
     color: #000;
     text-align: justify;
     padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content-about {
+    padding: 10px; 
 }
 .page h2, .page h3, .page h5 {
     text-align: center;
@@ -287,23 +296,13 @@ header {
 .page h3 {
     font-size: 1.75em;
     text-align: center;
-    padding: 5px 0;
+    padding: 20px 0;
 }
 .page h5 {
     font-weight: 1.5em;
     font-weight: bolder;
-    margin: 10px 0;
+    padding-bottom: 15px;
     color: #CE6304;
-}
-.page p {
-    text-align: center;
-    padding: 5px 10px;
-    font-size: 1em;
-    line-height: 1em;
-}
-.skills {
-    background-color: #ddd;
-    padding: 10px;
 }
 .post {
     margin: 0 auto;
@@ -362,7 +361,11 @@ img {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    padding: 20px 30px;
+    padding: 15px;
+}
+.container img:first-of-type {
+    width: 100%;
+    max-width: 100%;
 }
 
 /* Footer */
@@ -421,6 +424,67 @@ footer p {
         display: inline-block;
     }
 }
+@media only screen and (min-width: 620px) {
+   .about-page {
+        position: relative;
+        background-image: url("images/background.jpg"); 
+        background-repeat: no-repeat;
+        background-position-x: -300px;
+        background-position-y: -240px;          
+        height: 1100px;
+    }
+    .about-page img {
+        display: none;
+    }
+    .about-page h2 {
+        display: none;
+    }
+    .page h5, .page h3 {
+        text-align: left;
+    }
+    .page h3 {
+        padding: 20px;
+        font-size: 3em;
+        color: #fff;
+    }
+    .page p {
+        color: #fff;
+    }
+    .page blockquote {
+        border: none;
+        text-transform: uppercase;
+    }
+    .page h5 {
+        font-size: 2em;
+        text-transform: none;
+    }
+    .content-about {
+        background: rgba(25, 25, 25, .5);
+        position: relative;
+        top: 100px;
+        float: right;
+        width: 100%;
+        margin: 20px 0;
+        padding: 15px;
+    }
+    blockquote:before {
+        color: #ccc;
+        position: relative;
+        top: 25px;
+        left: 15px;
+    }
+    blockquote {
+        width: 60%;
+        float: right;
+        font-style: normal;
+        text-align: right;
+        font-size: 1.20em;
+    }
+    blockquote span {
+        font-size: 1.25em;
+        color: #CE6304;
+    }
+}
 @media only screen and (min-width: 900px) {
     header {
         position: fixed;
@@ -429,8 +493,7 @@ footer p {
         width: 100%;
     }
     .container {
-        margin: 93px auto;
-        width: 90%;
+        margin-top: 25px;
         padding-top: 10px;
     }
     .menu-btn {
@@ -440,6 +503,8 @@ footer p {
         display: inline-block;
         margin: 20px 0;
         float: right;
+        position: absolute;
+        right: 5%;        
     }
     h2 {
         font-size: 2em;
@@ -447,6 +512,8 @@ footer p {
     .postpage {
         position: relative;
         padding: 20px 10px;
+        width: 90%;
+        margin: 0 5%;
     }
     .post {
         width: 70%;
@@ -461,6 +528,9 @@ footer p {
     .single-post {
         margin-top: 93px;
     }
+    .single-image {
+        display: none;
+    }
     .more-link {
         position: absolute;
         width: 150px;
@@ -468,11 +538,15 @@ footer p {
     .site-nav {
         display: none;
     }
+    .about-page {
+        background-position-y: -180px;
+    }
+    .content-about {
+        width: 60%;
+        margin: 20px;
+    }
 }
 @media only screen and (min-width: 1100px) {
-    .container {
-        width: 70%;
-    }
     .post {
         width: 60%;
     }
@@ -483,19 +557,21 @@ footer p {
         left: 15%;
     }
     .nav {
-        position: absolute;
         right: 15%;
     }
     .postpage {
         border-bottom: 2px solid #ddd;
+        width: 70%;
+        margin: 0 15%;
     }
     .more-link {
         bottom: 20px;
     }
 }
 @media only screen and (min-width: 1500px) {
-    .container {
+    .postpage {
         width: 50%;
+        margin: 0 25%;
     }
     .nav {
         right: 25%;
@@ -503,4 +579,7 @@ footer p {
     .logo {
         left: 25%;
     }
+    .about-page {
+        background-position-x: 0;
+}
 }

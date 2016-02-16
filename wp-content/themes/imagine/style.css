@@ -36,6 +36,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
+    color: #232323;
 }
 ol, ul {
     list-style: none;
@@ -241,39 +242,40 @@ header {
 .close-btn:focus {
     outline: none;
 }
+
 /* Category Nav */
+
 .cat-nav {
     display: block;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #ccc;
 }
 .cat-nav ul li {
+    display: inline-block;
     list-style: none;
     text-align: center;
-    padding: 10px 25px;
+    padding: 10px;
 }
 .cat-nav a {
+    color: #fff;
     padding: 0 5px;
     text-decoration: none;
-    text-transform: uppercase;
     font-weight: bolder;
 }
 .cat-nav ul li.current-menu-item a:link, .cat-nav ul li.current-menu-item a:visited, .cat-nav a:hover {
-    color: #000;
+    color: #5B67C7;
 }
 
 /* Posts */
 
 .postpage {
-	padding: 15px;
+    position: relative;
+	padding: 20px 15px;
     width: 100%;
     display: block;
     border-bottom: 2px solid #ddd;
 }
 .postpage:last-of-type {
     border-bottom: none;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 .single-page {
     color: #000;
@@ -283,7 +285,8 @@ header {
     margin-right: auto;
 }
 .content-about {
-    padding: 10px; 
+    padding: 15px;
+    text-align: justify;
 }
 .page h2, .page h3, .page h5 {
     text-align: center;
@@ -307,8 +310,57 @@ header {
 .post {
     margin: 0 auto;
 }
-.single-post {
-    padding-bottom: 30px;
+
+/* Single post */
+
+.col-2-3 {
+    padding: 20px;
+}
+.col-1-3 {
+    width: 300px;
+    margin-bottom: 40px;
+}
+.single-post h2 {
+    font-size: 2em;
+}
+.single-post p {
+    font-size: 1em;
+}
+.widget-title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+}
+.widget-item li {
+    height: 120px;
+    padding: 10px 20px;
+}
+.widget-item li:hover {
+    background-color: #EEE;
+}
+.widget-item h3 {
+    display: inline-block;
+    float: right;
+    width: 60%;
+    font-size: 1.25em;
+    padding-left: 38px;
+}
+.post-date {
+    display: inline-block;
+    float: right;
+    font-size: 1em;
+    padding-bottom: 5px;
+    color: #505050;
+}
+.widget-item li a {
+    font-family: 'Cabin', sans-serif;
+    text-decoration: none;
+}
+.widget-item img {
+    position: relative;
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
 }
 
 /* Post Info */
@@ -316,7 +368,7 @@ header {
 .post-info {
     font-size: 1em;
     color: #969696;
-    margin: 5px 0;
+    margin: 10px 0;
 }
 .post-info a {
     font-size: 1em;
@@ -327,20 +379,87 @@ header {
 /* More Link*/
 
 .more-link {
+    position: relative;
+    width: 120px;
     display: block;
-    margin: 10px auto;
-    padding: 10px;
+    margin-top: 10px;
+    padding: 5px;
     color: #000;
     text-decoration: none;
     text-align: center;
     border: 1px solid #868686;
-    border-radius: 15px;
-    background-color: #E6E6E6;
+    border-radius: 8px;
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
 }
-.more-link:hover {
-    background-color: #868686;
+.more-link:active {
+    -webkit-box-shadow: inset 2px 1px 1px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 2px 1px 1px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 2px 1px 1px 0px rgba(0,0,0,0.75);
+}
+
+/* Contact */
+
+.contact {
+    width: 100%;
+    min-height: 800px;
+}
+.contact h3 {
+    padding: 15px 0;
+}
+form {
+    width: 270px;
+    margin: 20px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+form ol {
+    margin-top: 12px;
+}
+form li {
+    padding: 16px 5px;
+}
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 5px;
+    border: 1px solid #cfcfcf;
+    box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.25);
+    padding: 7px 10px;
+    font-style: italic;
+}
+#submit-btn {
+    width: 100%;
+    height: 45px;
+    float: right;
+    margin-bottom: 30px;
+    border: none;
+    background-color: #252525;
     color: #fff;
+    font-size: 1.25em;
 }
+#submit-btn:hover {
+    opacity: 0.8;
+}
+.social {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 280px;
+}
+.social li a {
+    color: #CE6304;
+    text-decoration: none;
+}
+.social li a img {
+    position: relative;
+    top: 18px;
+    margin-right: 5px;
+}
+.social li a:hover {
+    opacity: 0.8;
+    }
 
 /* Image Styles */
 
@@ -352,20 +471,21 @@ img {
     opacity: 0.8;
     }
 .post-image img {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-    display: block;
-}
-.single-image img {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    padding: 15px;
-}
-.container img:first-of-type {
     width: 100%;
-    max-width: 100%;
+    height: 160px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.single-img img {
+    width: 100%;
+    display: block;
+}
+.about-page img {
+    width: 100%;
+}
+.single-img {
+    width: 100%;
 }
 
 /* Footer */
@@ -376,13 +496,13 @@ footer {
     position: relative;
 }
 footer p {
-    padding: 10px 0;
+    padding: 30px 0;
 }
 
 .back-to-top {
     text-decoration: none;
     position: relative;
-    top: -32px;
+    top: -35px;
 }
 
 /* Media */
@@ -393,6 +513,9 @@ footer p {
         margin-left: auto;
         margin-right: auto;
     }
+    .post-image img {
+        height: 200px;
+    }   
 }
 @media only screen and (min-width: 530px) {
     .postpage {
@@ -410,18 +533,43 @@ footer p {
     }
     .post {
         width: 60%;
+        height: 200px;
         display: inline-block;
         padding-left: 20px;
     }
     .post-info {
         margin-top: 0;
     }
-    .cat-nav {
-        background-color: inherit;
-        text-align: center;
+    .more-link {
+        position: absolute;
+        bottom: 22px;
     }
-    .cat-nav ul li {
+}
+@media only screen and (min-width: 580px) {
+    .portfolio li {
         display: inline-block;
+        max-width: 280px;
+    }
+    .portfolio figure {
+        width: 100%;
+    }
+    .social {
+        float: left;
+        display: inline-block;
+    }
+    .social li {
+        padding: 10px 0;
+    }    
+    form {
+        margin-top: 25px;
+        margin-right: 10px;
+        float: right;
+        display: inline-block;
+    }
+    .content {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 @media only screen and (min-width: 620px) {
@@ -439,10 +587,10 @@ footer p {
     .about-page h2 {
         display: none;
     }
-    .page h5, .page h3 {
+    .content-about h5, .content-about h3 {
         text-align: left;
     }
-    .page h3 {
+    .content-about h3 {
         padding: 20px;
         font-size: 3em;
         color: #fff;
@@ -484,18 +632,14 @@ footer p {
         font-size: 1.25em;
         color: #CE6304;
     }
+    .single-img {
+        margin: 10px 0;
+    }
+    .contact {
+        padding: 0 20px;
+    }
 }
 @media only screen and (min-width: 900px) {
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
-    .container {
-        margin-top: 25px;
-        padding-top: 10px;
-    }
     .menu-btn {
         display: none;
     }
@@ -510,10 +654,12 @@ footer p {
         font-size: 2em;
     }
     .postpage {
-        position: relative;
         padding: 20px 10px;
         width: 90%;
         margin: 0 5%;
+    }
+    .postpage:first-of-type {
+        margin-top: 10px;
     }
     .post {
         width: 70%;
@@ -525,15 +671,8 @@ footer p {
         position: relative;
         left: 5%;
     }
-    .single-post {
-        margin-top: 93px;
-    }
     .single-image {
         display: none;
-    }
-    .more-link {
-        position: absolute;
-        width: 150px;
     }
     .site-nav {
         display: none;
@@ -545,7 +684,32 @@ footer p {
         width: 60%;
         margin: 20px;
     }
+    .contact {
+        width: 90%;
+        margin: 30px 5%;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    .content {
+        width: 900px;
+        margin: 30px auto;
+    }
+    .col-2-3 {
+        width: 66.6666%;
+        float: left;
+        display: inline-block;
+        padding: 0 20px;
+        margin-bottom: 50px;
+    }
+    .col-1-3 {
+        width: 33.3333%;
+        display: inline-block;
+    }
+    .single-post p {
+        font-size: 1.15em;
+    }
 }
+
 @media only screen and (min-width: 1100px) {
     .post {
         width: 60%;
@@ -564,8 +728,28 @@ footer p {
         width: 70%;
         margin: 0 15%;
     }
-    .more-link {
-        bottom: 20px;
+    .content {
+        width: 1000px;
+        margin: 30px auto;
+    }
+    .col-2-3 {
+        width: 66.6666%;
+        float: left;
+        display: inline-block;
+        padding: 0 20px;
+        margin-bottom: 50px;
+    }
+    .col-1-3 {
+        width: 33.3333%;
+        display: inline-block;
+        padding: 0 20px;
+    }
+    .contact {
+        width: 70%;
+        margin: 40px 15%;
+    }
+    form {
+        width: 350px;
     }
 }
 @media only screen and (min-width: 1500px) {
@@ -581,5 +765,10 @@ footer p {
     }
     .about-page {
         background-position-x: 0;
-}
+    }
+    .contact {
+        width: 50%;
+        margin: 40px 25%;
+        margin-bottom: 0;
+    }
 }

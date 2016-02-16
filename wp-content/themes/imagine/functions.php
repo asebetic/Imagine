@@ -11,8 +11,8 @@ function blog_setup()
 
 	// Add feature image support
 	add_theme_support('post-thumbnails');
-	add_image_size('post-image', 420, 420, true);
-    add_image_size('single-image', 420, 420, true);
+	add_image_size('post-image', 400, 250, true);
+    add_image_size('single-image', 940, 300, true);
 
     // Navigation Menus
     register_nav_menus(array(
@@ -39,7 +39,7 @@ add_action('wp_enqueue_scripts', 'blog_scripts');
 // Excerpt length
 function custom_excerpt_length() 
 {
-    return 25;
+    return 20;
 }
 
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
@@ -51,3 +51,32 @@ function theme_enqueue_script()
 }
 
 add_action('wp_enqueue_scripts', 'theme_enqueue_script');
+
+
+function exclude_category($query)
+{
+    if ($query->is_home()) {
+        $query->set('cat', '-8');
+    }
+    return $query;
+}
+
+add_filter('pre_get_posts', 'exclude_category');
+
+// Add Widget Area
+
+function ourWidgetsInit()
+{
+
+    register_sidebar(array(
+        'name' => 'Sidebar',
+        'id' => 'sidebar',
+        'before_widget' => '<div class="widget-item">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
+
+}
+
+add_action('widgets_init', 'ourWidgetsInit');

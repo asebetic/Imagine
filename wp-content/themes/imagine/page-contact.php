@@ -61,12 +61,11 @@ $headers = 'From: '. $email . "\r\n" . 'Reply-To: ' . $email . "\r\n";
 
 	<div class="contact">
 		<ul class="social">
-			<li><a href="https://www.facebook.com/ivan.veres.dj"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/facebook.png" width="50" height="50" alt="Facebook"/>Contact me on Facebook</a></li>
-			<li><a href="https://twitter.com/ivan_veres"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/twitter.png" width="50" height="50" alt="Twitter"/>Follow me on Twitter</a></li>
-			<li><a href="https://hr.linkedin.com/in/ivan-vere%C5%A1-417811106"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/linkedin.png" width="50" height="50" alt="Linkedin"/>Connect with me on LinkedIn</a></li>
-			<li><a href=""><img src="<?php bloginfo('stylesheet_directory'); ?>/images/skype.png" width="50" height="50" alt="Skype"/>Add me on Skype</a></li>
+			<li><a href="https://www.facebook.com/ivan.veres.dj" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/facebook.png" width="50" height="50" alt="Facebook"/>Contact me on Facebook</a></li>
+			<li><a href="https://twitter.com/ivan_veres" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/twitter.png" width="50" height="50" alt="Twitter"/>Follow me on Twitter</a></li>
+			<li><a href="https://hr.linkedin.com/in/ivan-vere%C5%A1-417811106" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/linkedin.png" width="50" height="50" alt="Linkedin"/>Connect with me on LinkedIn</a></li>
 		</ul>
-		<form action="<?php the_permalink(); ?>" id="contactForm" method="post">
+		<form id="contact-form" action="<?php the_permalink(); ?>" id="contactForm" method="post">
 			<h3>Send me an email</h3>
 			<ol>
 				<li>

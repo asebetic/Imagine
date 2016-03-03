@@ -21,19 +21,21 @@
         </nav>  
         <!-- header -->
         <header>
-            <div class="logo">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png"></a>
-            </div>
-            <a class="menu-btn"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/menu.png"></a>
-            <nav class="nav">
-            <?php
-            $args = array(
-                'theme_location' => 'primary'
-            );
+            <div class="header">
+                <div class="logo">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png"></a>
+                </div>
+                <a class="menu-btn"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/menu.png"></a>
+                <nav class="nav">
+                <?php
+                $args = array(
+                    'theme_location' => 'primary'
+                );
 
-            wp_nav_menu($args);
-            ?>
-            </nav>              
+                wp_nav_menu($args);
+                ?>
+                </nav> 
+            </div>             
         </header>
     <!-- Container -->
     <div class="container">

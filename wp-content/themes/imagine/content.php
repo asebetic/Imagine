@@ -23,4 +23,8 @@
 
     <?php get_sidebar(); ?>
 
+    <div class="comments col-2-3">
+        <h2>Comments</h2>
+        <?php comments_template(); ?>
+    </div>
 </div>

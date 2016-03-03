@@ -50,19 +50,6 @@ q:before, q:after {
     content: none;
 }
 
-/* remember to highlight inserts somehow! */
-ins {
-    text-decoration: none;
-}
-del {
-    text-decoration: line-through;
-}
-
-table {
-    border-collapse: collapse;
-}
-
-
 * {
 	margin: 0;
 	padding: 0;
@@ -86,9 +73,7 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-h1, h2, h3 {
-	text-align: left;
-}
+
 h1 a, h2 a, .nav a {
 	text-decoration: none;
 }
@@ -149,7 +134,6 @@ header {
     margin-left: 10px;
 }
 .menu-btn {
-    display: inline-block;
     float: right;
     margin-right: 20px;
     box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, .2);
@@ -172,9 +156,7 @@ header {
     display: none;
 }
 .nav ul li {
-    list-style: none;
     float: left;
-    text-align: center;
     padding: 0 15px;
 }
 .nav ul li a {
@@ -224,30 +206,9 @@ header {
     border-left: 2px solid #CE6304;
     border-right: 2px solid #CE6304;
 }
-.close-btn {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 30px;
-    right: 10px;
-    background-color: #A9A5A5;
-    border: 1px solid #232222;
-    border-radius: 5px;
-    box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, .2);
-    cursor: pointer;
-}
-.close-btn:hover {
-    background-color: #fff;
-}
-.close-btn:focus {
-    outline: none;
-}
 
 /* Category Nav */
 
-.cat-nav {
-    display: block;
-}
 .cat-nav ul li {
     display: inline-block;
     list-style: none;
@@ -269,20 +230,12 @@ header {
 .postpage {
     position: relative;
 	padding: 20px 15px;
-    width: 100%;
-    display: block;
+}
+.postpage:not(:last-of-type) {
     border-bottom: 2px solid #ddd;
 }
 .postpage:last-of-type {
-    border-bottom: none;
-    margin-bottom: 60px;
-}
-.single-page {
-    color: #000;
-    text-align: justify;
-    padding-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 50px;
 }
 .content-about {
     padding: 15px;
@@ -307,9 +260,6 @@ header {
     padding-bottom: 15px;
     color: #CE6304;
 }
-.post {
-    margin: 0 auto;
-}
 
 /* Single post */
 
@@ -320,23 +270,23 @@ header {
     width: 300px;
     margin-bottom: 40px;
 }
-.single-post h2 {
-    font-size: 2em;
-}
 .single-post p {
     font-size: 1em;
 }
+.widget-item {
+    margin: 0 20px;
+}
 .widget-title {
-    text-align: center;
     text-transform: uppercase;
-    margin-bottom: 28px;
+    margin-top: 10px;
+    margin-bottom: 35px;
+    padding-left: 20px;
 }
 .widget-item li {
     height: 120px;
-    padding: 10px 20px;
 }
 .widget-item li:hover {
-    background-color: #EEE;
+    opacity: 0.9;
 }
 .widget-item h3 {
     display: inline-block;
@@ -352,7 +302,7 @@ header {
     padding-bottom: 5px;
     color: #505050;
 }
-.widget-item li a {
+.widget-item li a, .comment-body a {
     font-family: 'Cabin', sans-serif;
     text-decoration: none;
 }
@@ -366,7 +316,6 @@ header {
 /* Post Info */
 
 .post-info {
-    font-size: 1em;
     color: #969696;
     margin: 10px 0;
 }
@@ -388,40 +337,38 @@ header {
     text-decoration: none;
     text-align: center;
     border: 1px solid #868686;
-    border-radius: 8px;
-    -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
-    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 2px 0px 0px rgba(0,0,0,.75);
+    -moz-box-shadow: 0px 2px 0px 0px rgba(0,0,0,.75);
+    box-shadow: 0px 2px 0px 0px rgba(0,0,0,.75);
 }
 .more-link:active {
-    -webkit-box-shadow: inset 2px 1px 1px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: inset 2px 1px 1px 0px rgba(0,0,0,0.75);
-    box-shadow: inset 2px 1px 1px 0px rgba(0,0,0,0.75);
-}
+        margin-top: 12px;
+        padding: 4px 5px;
+        -webkit-box-shadow: 0px 0px 0px 0px white;
+        -moz-box-shadow: 0px 0px 0px 0px white;
+        box-shadow: 0px 0px 0px 0px white;
+    }
 
 /* Contact */
 
-.contact {
-    width: 100%;
-    min-height: 800px;
-}
 .contact h3 {
-    padding: 15px 0;
+    padding-top: 15px;
+    padding-bottom: 0;
 }
-form {
-    width: 270px;
+#contact-form {
+    width: 85%;
     margin: 20px 10px;
     margin-left: auto;
     margin-right: auto;
-    display: block;
 }
-form ol {
+#contact-form ol {
     margin-top: 12px;
 }
-form li {
+#contact-form li {
     padding: 16px 5px;
 }
-form input, form textarea {
+#contact-form input, #contact-form textarea {
     width: 100%;
     margin-bottom: 5px;
     border: 1px solid #cfcfcf;
@@ -432,7 +379,6 @@ form input, form textarea {
 #submit-btn {
     width: 100%;
     height: 45px;
-    float: right;
     margin-bottom: 30px;
     border: none;
     background-color: #252525;
@@ -443,10 +389,10 @@ form input, form textarea {
     opacity: 0.8;
 }
 .social {
+    width: 280px;
     margin-left: auto;
     margin-right: auto;
-    display: block;
-    width: 280px;
+    margin-top: 30px;
 }
 .social li a {
     color: #CE6304;
@@ -468,14 +414,13 @@ img {
     height: auto;
 }
 .post-image:hover {
-    opacity: 0.8;
+    opacity: 0.9;
     }
 .post-image img {
     width: 100%;
-    height: 160px;
+    max-width: 360px;
+    height: 200px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 .single-img img {
     width: 100%;
@@ -484,51 +429,141 @@ img {
 .about-page img {
     width: 100%;
 }
-.single-img {
+.col-2-3 img,.single-img {
     width: 100%;
+    margin: 10px 0;
 }
 
 /* Footer */
 
 footer {
+    position: relative;
+    padding-bottom: 30px;
 	background-color: #252525;
     text-align: center;
-    position: relative;
 }
-footer p {
-    padding: 30px 0;
-}
-
 .back-to-top {
-    text-decoration: none;
     position: relative;
     top: -35px;
+}
+.back-to-top:active {
+    top: -38px;
+}
+.icons {
+    margin-top: 20px;
+}
+.icons img {
+    width: 35px;
+    height: 35px;
+    margin: 0 5px;
+    background-color: #FFF;
+    border-radius: 50%;
+    padding: 7px;
+    -webkit-filter: invert(90%);
+    filter: invert(90%);
+}
+.icons img:hover {
+    -webkit-filter: invert(0%);
+    filter: invert(0%);
+}
+
+/* Comments */
+
+.comments {
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+.comments h2 {
+    margin: 20px 0;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    color: #FFF;
+    background-color: #120B0B;
+}
+#comments {
+    display: none;
+}
+.comment-body {
+    position: relative;
+    border-bottom: 1px solid #D7D7D7;
+    padding: 20px 0 25px 0;
+}
+.comment-body img {
+    width: 75px;
+    position: relative;
+    top: -5px;
+    float: left;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+.comment-body p {
+    padding-top: 50px;
+    padding-bottom: 25px;
+    text-align: justify;
+}
+.comment-body a {
+    color: #505050;
+    font-size: 0.85em;
+}
+.comments small {
+    color: #000;
+}
+.comment-author {
+    padding-bottom: 5px;
+}
+.fn {
+    color: #1E78ED;
+    font-size: 1.5em;
+}
+.reply {
+    position: relative;
+    bottom: 20px;
+    float: right;
+    text-align: center;
+    background-color: #1E78ED;
+    padding: 5px 3px;
+    width: 50px;
+}
+.reply a {
+    color: #FFF;
+    text-decoration: none;
+}
+.comments input, .comments textarea {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border: 1px solid #cfcfcf;
+    box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.25);
+    padding: 7px 10px;
+}
+#respond {
+    margin-top: 20px;
+}
+#submit {
+    width: 100%;
+    border: none;
+    background-color: #120B0B;
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+#submit:hover {
+    opacity: 0.8;
+}
+.children {
+    margin-left: 25px;
 }
 
 /* Media */
 
-@media only screen and (min-width: 460px) {
-    .postpage {
-        width: 85%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .post-image img {
-        height: 200px;
-    }   
-}
 @media only screen and (min-width: 530px) {
     .postpage {
-        display: inline-block;
-        width: 100%;
+        width: 95%;
     }
     .post-image {
         display: inline-block;
         float: left;
         width: 40%;
-        min-height: 180px;
-    }
-    .post-image img {
         min-height: 180px;
     }
     .post {
@@ -544,36 +579,30 @@ footer p {
         position: absolute;
         bottom: 22px;
     }
+    .more-link:active {
+        bottom: 18px;
+    }
 }
 @media only screen and (min-width: 580px) {
-    .portfolio li {
-        display: inline-block;
-        max-width: 280px;
-    }
-    .portfolio figure {
-        width: 100%;
-    }
-    .social {
-        float: left;
-        display: inline-block;
-    }
-    .social li {
-        padding: 10px 0;
-    }    
-    form {
-        margin-top: 25px;
-        margin-right: 10px;
-        float: right;
-        display: inline-block;
-    }
-    .content {
-        width: 90%;
+    .header, .content {
+        width: 95%;
         margin-left: auto;
         margin-right: auto;
     }
-}
-@media only screen and (min-width: 620px) {
-   .about-page {
+    .social {
+        width: 350px;
+    }
+    .social li {
+        padding: 10px 0;
+    }  
+    .social li a {
+        font-size: 1.25em;
+    }  
+    #contact-form {
+        margin-top: 25px;
+        width: 450px;
+    }
+    .about-page {
         position: relative;
         background-image: url("images/background.jpg"); 
         background-repeat: no-repeat;
@@ -632,31 +661,39 @@ footer p {
         font-size: 1.25em;
         color: #CE6304;
     }
-    .single-img {
-        margin: 10px 0;
+    .comments {
+        margin-bottom: 50px;
     }
-    .contact {
-        padding: 0 20px;
+    .comment-body p {
+        padding-top: 0;
+        padding-left: 90px;
+    }
+    .comment-meta {
+        display: inline-block;
+        float: right;
+        position: relative;
+        top: -22px;
     }
 }
 @media only screen and (min-width: 900px) {
-    .menu-btn {
+    .header, .postpage, .content {
+        width: 900px;
+    }
+    .menu-btn, .single-image, .site-nav {
         display: none;
     }
+    .nav, .col-1-3, .col-2-3 {
+        display: inline-block;      
+    }
     .nav {
-        display: inline-block;
         margin: 20px 0;
-        float: right;
-        position: absolute;
-        right: 5%;        
+        float: right;      
     }
     h2 {
         font-size: 2em;
     }
     .postpage {
         padding: 20px 10px;
-        width: 90%;
-        margin: 0 5%;
     }
     .postpage:first-of-type {
         margin-top: 10px;
@@ -666,16 +703,6 @@ footer p {
     }
     .post-image {
         width: 30%;
-    }
-    .logo {
-        position: relative;
-        left: 5%;
-    }
-    .single-image {
-        display: none;
-    }
-    .site-nav {
-        display: none;
     }
     .about-page {
         background-position-y: -180px;
@@ -691,78 +718,49 @@ footer p {
         padding: 0;
     }
     .content {
-        width: 900px;
         margin: 30px auto;
     }
     .col-2-3 {
         width: 66.6666%;
         float: left;
-        display: inline-block;
         padding: 0 20px;
-        margin-bottom: 50px;
     }
     .col-1-3 {
         width: 33.3333%;
-        display: inline-block;
+    }
+    .widget-title {
+        padding-left: 0;
     }
     .single-post p {
-        font-size: 1.15em;
+        line-height: 1.5em;
+    }
+    .comments h2 {
+        font-size: 1.5em;
+    }
+    .children {
+        margin-left: 75px;
     }
 }
 
 @media only screen and (min-width: 1100px) {
+    .header, .postpage, .content {
+        width: 1000px;
+    }
     .post {
         width: 60%;
     }
     .post-image {
         width: 40%;
     }
-    .logo {
-        left: 15%;
-    }
-    .nav {
-        right: 15%;
-    }
-    .postpage {
-        border-bottom: 2px solid #ddd;
-        width: 70%;
-        margin: 0 15%;
-    }
-    .content {
-        width: 1000px;
-        margin: 30px auto;
-    }
-    .col-2-3 {
-        width: 66.6666%;
-        float: left;
-        display: inline-block;
-        padding: 0 20px;
-        margin-bottom: 50px;
-    }
     .col-1-3 {
-        width: 33.3333%;
-        display: inline-block;
         padding: 0 20px;
     }
     .contact {
         width: 70%;
         margin: 40px 15%;
     }
-    form {
-        width: 350px;
-    }
 }
 @media only screen and (min-width: 1500px) {
-    .postpage {
-        width: 50%;
-        margin: 0 25%;
-    }
-    .nav {
-        right: 25%;
-    }
-    .logo {
-        left: 25%;
-    }
     .about-page {
         background-position-x: 0;
     }

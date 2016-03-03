@@ -13,4 +13,6 @@ else :
     echo '<p>No content found</p>';
 endif;
 
-get_footer();
+?>
+
+<?php get_footer(); ?>

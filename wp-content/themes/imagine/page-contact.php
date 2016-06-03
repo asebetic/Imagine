@@ -67,20 +67,20 @@ $headers = 'From: '. $email . "\r\n" . 'Reply-To: ' . $email . "\r\n";
 		</ul>
 		<form id="contact-form" action="<?php the_permalink(); ?>" id="contactForm" method="post">
 			<h3>Send me an email</h3>
-			<ol>
-				<li>
+			<ul>
+				<label>
 					<input type="text" name="contactName" id="contactName" placeholder="Name..." value="" />
-				</li>
-				<li>
+				</label>
+				<label>
 					<input type="text" name="email" id="email" placeholder="E-mail..." value="" />
-				</li>
-				<li>
+				</label>
+				<label>
 						<textarea name="comments" id="commentsText" rows="20" cols="30" placeholder="Message..."></textarea>
-				</li>
-				<li>
+				</label>
+				<label>
 					<button id="submit-btn" type="submit">SEND</button>
-				</li>
-			</ol>
+				</label>
+			</ul>
 			<input type="hidden" name="submitted" id="submitted" value="true" />
 		</form>
 	</div>

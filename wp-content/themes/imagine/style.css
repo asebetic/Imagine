@@ -229,13 +229,19 @@ header {
 
 .postpage {
     position: relative;
-	padding: 20px 15px;
+	padding: 20px 0;
+}
+.postpage:first-of-type {
+    padding-top: 0; 
 }
 .postpage:not(:last-of-type) {
     border-bottom: 2px solid #ddd;
 }
 .postpage:last-of-type {
     margin-bottom: 50px;
+}
+.post {
+    padding: 0 15px;
 }
 .content-about {
     padding: 15px;
@@ -264,17 +270,20 @@ header {
 /* Single post */
 
 .col-2-3 {
-    padding: 20px;
+    padding: 20px 0;
 }
 .col-1-3 {
     width: 300px;
     margin-bottom: 40px;
 }
+.single-post h2, .single-post p {
+    padding: 0 15px;
+}
 .single-post p {
     font-size: 1em;
 }
 .widget-item {
-    margin: 0 20px;
+    margin: 0 15px;
 }
 .widget-title {
     text-transform: uppercase;
@@ -352,10 +361,6 @@ header {
 
 /* Contact */
 
-.contact h3 {
-    padding-top: 15px;
-    padding-bottom: 0;
-}
 #contact-form {
     width: 85%;
     margin: 20px 10px;
@@ -365,21 +370,19 @@ header {
 #contact-form ol {
     margin-top: 12px;
 }
-#contact-form li {
-    padding: 16px 5px;
-}
 #contact-form input, #contact-form textarea {
     width: 100%;
-    margin-bottom: 5px;
-    border: 1px solid #cfcfcf;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
     box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.25);
-    padding: 7px 10px;
-    font-style: italic;
 }
 #submit-btn {
     width: 100%;
     height: 45px;
-    margin-bottom: 30px;
+    margin: 30px 0;
     border: none;
     background-color: #252525;
     color: #fff;
@@ -400,7 +403,7 @@ header {
 }
 .social li a img {
     position: relative;
-    top: 18px;
+    top: 12px;
     margin-right: 5px;
 }
 .social li a:hover {
@@ -418,7 +421,6 @@ img {
     }
 .post-image img {
     width: 100%;
-    max-width: 360px;
     height: 200px;
     display: block;
 }
@@ -427,7 +429,17 @@ img {
     display: block;
 }
 .about-page img {
-    width: 100%;
+    display: block;
+    /*height: 85vh;*/
+    overflow: hidden;
+}
+#aboutimg {
+    display: block;
+    height: 90vh;
+    background: url("images/background-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: 55% 50%;
+    background-size: 150%;
 }
 .col-2-3 img,.single-img {
     width: 100%;
@@ -471,7 +483,7 @@ footer {
 
 .comments {
     margin-bottom: 50px;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 .comments h2 {
     margin: 20px 0;
@@ -480,10 +492,15 @@ footer {
     color: #FFF;
     background-color: #120B0B;
 }
+.comments p {
+    padding: 0;
+    line-height: 1.2em;
+}
 #comments {
     display: none;
 }
 .comment-body {
+    min-height: 120px;
     position: relative;
     border-bottom: 1px solid #D7D7D7;
     padding: 20px 0 25px 0;
@@ -491,7 +508,7 @@ footer {
 .comment-body img {
     width: 75px;
     position: relative;
-    top: -5px;
+    top: -10px;
     float: left;
     margin-right: 15px;
     border-radius: 50%;
@@ -528,13 +545,23 @@ footer {
     color: #FFF;
     text-decoration: none;
 }
+input, textarea {
+    border: 1px solid #AEAEAE;
+    outline: none;
+    font-family: sans-serif;
+    font-size: 1em;
+    padding: 7px 0;
+}
+.comments input:focus, .comments textarea:focus {
+    border-bottom-color: #CE630C;
+}
 .comments input, .comments textarea {
     width: 100%;
     margin-top: 20px;
     margin-bottom: 5px;
-    border: 1px solid #cfcfcf;
-    box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.25);
-    padding: 7px 10px;
+    border: none;
+    border-bottom: 1px solid #cfcfcf;
+
 }
 #respond {
     margin-top: 20px;
@@ -560,6 +587,9 @@ footer {
     .postpage {
         width: 95%;
     }
+    .postpage:first-of-type {
+        padding-top: 20px;
+    }
     .post-image {
         display: inline-block;
         float: left;
@@ -582,12 +612,23 @@ footer {
     .more-link:active {
         bottom: 18px;
     }
+    #aboutimg {
+        height: 300px;
+        background-position: 50% 35%;
+        background-size: 60%;
+    }
 }
-@media only screen and (min-width: 580px) {
+@media only screen and (min-width: 650px) {
+    #aboutimg {
+        display: none;
+    }
     .header, .content {
         width: 95%;
         margin-left: auto;
         margin-right: auto;
+    }
+    .single-post p, .single-post h2 {
+        padding: 0;
     }
     .social {
         width: 350px;
@@ -663,6 +704,9 @@ footer {
     }
     .comments {
         margin-bottom: 50px;
+    }
+    .comments h2 {
+        padding: 10px 20px;
     }
     .comment-body p {
         padding-top: 0;

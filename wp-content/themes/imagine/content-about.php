@@ -1,5 +1,7 @@
 <article class="about-page">
-	<?php the_post_thumbnail('single-image'); ?>
+	<figure id="aboutimg">
+		<?php the_post_thumbnail('about-image'); ?>	
+	</figure>
 	<section class="content-about">
 	<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
     <p>

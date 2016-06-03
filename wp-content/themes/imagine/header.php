@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 <link href='https://fonts.googleapis.com/css?family=Cabin:400,400italic,600,700' rel='stylesheet' type='text/css'> 
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,700' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 

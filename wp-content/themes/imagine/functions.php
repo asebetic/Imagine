@@ -13,6 +13,7 @@ function blog_setup()
 	add_theme_support('post-thumbnails');
 	add_image_size('post-image', 400, 250, true);
     add_image_size('single-image', 940, 300, true);
+    add_image_size('about-image', 768, 768, true);
 
     // Navigation Menus
     register_nav_menus(array(

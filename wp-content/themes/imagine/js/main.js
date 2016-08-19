@@ -5,16 +5,16 @@ $(document).ready(function() {
     $('.menu-btn').click(function() {
 
         if(menu == "close") {
-            $('.site-nav').css('-webkit-transform', 'translate(0, 0');
-            $('.site-nav').css('-moz-transform', 'translate(0, 0');
-            $('.site-nav').css('transform', 'translate(0, 0');
+            $('.site-nav').css('-webkit-transform', 'translate(0, 0)');
+            $('.site-nav').css('-moz-transform', 'translate(0, 0)');
+            $('.site-nav').css('transform', 'translate(0, 0)');
             menu = "open";
         }
 
         else {
-            $('.site-nav').css('-webkit-transform', 'translate(0, -100%');
-            $('.site-nav').css('-moz-transform', 'translate(0, -100%');
-            $('.site-nav').css('transform', 'translate(0, -100%');
+            $('.site-nav').css('-webkit-transform', 'translate(0, -100%)');
+            $('.site-nav').css('-moz-transform', 'translate(0, -100%)');
+            $('.site-nav').css('transform', 'translate(0, -100%)');
             menu = "close";
         }
     });
